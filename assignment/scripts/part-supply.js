@@ -38,9 +38,9 @@ console.log(supplyChanges);
 //      - If the value is a negative number, push it into the 'negatives' array.
 //      - If the value is a zero, push it into the 'zeroes' array.
 console.log('6. Looping through supplyChanges to populate arrays with positive, negative, and zero values:');
-let positives=[];
-let negatives=[];
-let zeroes=[];
+
+let positives=[], negatives=[], zeroes=[];
+
 for (i=0; i<=supplyChanges.length-1; i++) {
   if (supplyChanges.at(i)>0) {
     positives.push(supplyChanges.at(i));
@@ -61,14 +61,31 @@ console.log('Positives:',positives,'Negatives:',negatives,'Zeroes:',zeroes);
 //    'negatives', and 'zeroes', create three new arrays named 'stretchPositives',
 //    'stretchNegatives', and 'stretchZeroes'. 
 console.log('7. Looping through supplyChanges to populate more arrays with positive, negative, and zero values:');
-
+let stretchPositives=[], stretchNegatives=[], stretchZeroes=[];
+for (numbers of supplyChanges) {
+  if (numbers>0) {
+    stretchPositives.push(numbers);
+  }
+  else if (numbers<0) {
+    stretchNegatives.push(numbers);
+  }
+  else {
+    stretchZeroes.push(numbers);
+  }
+numbers ++;
+}
+console.log('Stretch positives:',stretchPositives,'Stretch negatives:',stretchNegatives,'Stretch zeroes:',stretchZeroes);
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...of
 
 // 8. Create a variable called 'totalParts' and assign it a value of 0.
 //    Then, write a loop that adds each value of the 'supplyChanges'
 //    array to the 'totalParts' variable.
 console.log('8. Looping through supplyChanges to calculate the sum:');
-
-
+let totalParts = 0;
+for (i=0; i<=supplyChanges.length-1; i ++) {
+  totalParts += supplyChanges[i];
+}
+console.log(totalParts);
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. There are 572
 //    parts in total, and each box holds 7 parts.
