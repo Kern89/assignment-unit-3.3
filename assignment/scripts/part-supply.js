@@ -86,6 +86,8 @@ for (i=0; i<=supplyChanges.length-1; i ++) {
   totalParts += supplyChanges[i];
 }
 console.log(totalParts);
+//https://stackoverflow.com/questions/67432938/turning-a-sum-of-an-array-into-a-variable
+
 // 9. We have a large stash of parts in our warehouse that we 
 //    need to box up and get ready for shipment. There are 572
 //    parts in total, and each box holds 7 parts.
@@ -98,9 +100,14 @@ console.log(totalParts);
 //    "left over," and the value of 'boxesFilled' should reflect
 //    how many boxes were filled.
 console.log('9. Filling boxes with a "while" loop');
-
-
-
+let parts = 572;
+let boxesFilled = 0;
+while (parts >= 7) {
+  parts -= 7;
+  boxesFilled += 1;
+}
+console.log('We have',boxesFilled,'boxes filled and',parts,'leftover parts');
+//https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Subtraction_assignment
 
 // DO NOT MODIFY
 // Used for automated testing
